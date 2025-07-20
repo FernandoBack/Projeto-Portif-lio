@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fernando Back</title>
+  <link rel="stylesheet" href="./style.css" />
+  <script type="module" src="./Projeto-Portif-lio/JS/main.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Fernando Back</h1>
+    <nav>
+      <ul>
+        <li><a href="#sobre">Sobre mim</a></li>
+        <li><a href="#projeto">Projeto</a></li>
+        <li><a href="#contatos">Contatos</a></li>
+        <li><a href="http://google.com.br/" target="_blank" rel="noopener noreferrer">Google</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="sobre">
+    <h2>Sobre mim</h2>
+
+    <img src="./eu.png" alt="Imagem de perfil" title="Imagem de Fernando" />
+    <article>
+      <p>
+        Olá, sou o Fernando! Sou apaixonado por design e tecnologia, sempre buscando transformar ideias em experiências únicas. Adoro aprender, criar e compartilhar novas soluções. Se você quer conversar sobre inovação, estou à disposição!
+      </p>
+    </article>
+
+    <aside>
+      <h3>Habilidade</h3>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JAVASCRIPT</li>
+      </ul>
+    </aside>
+  </section>
+
+  <section id="projeto">
+    <h2>Projetos</h2>
+    <article>
+      <h3>Portifólio</h3>
+      <p>
+        Adoro trocar ideias sobre Web Design! Se você quiser conversar, compartilhar dicas ou até mesmo colaborar em um projeto, me mande uma mensagem. Estou disponível por e-mail e redes sociais!
+
+        Se quiser algo mais específico, me avise!
+      </p>
+    </article>
+
+    <section id="habilidades">
+      <h2>Habilidades e Tecnologias</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Tecnologia</th>
+            <th>Nível</th>
+            <th>Descrição</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>HTML</td>
+            <td>Iniciante</td>
+            <td>Capaz de construir estrutura de páginas web</td>
+          </tr>
+
+          <tr>
+            <td>CSS</td>
+            <td>Intermediário</td>
+            <td>Experiência com flexbox</td>
+          </tr>
+
+          <tr>
+            <td>JavaScript</td>
+            <td>Básico</td>
+            <td>Desenvolvimento de Script</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Seção de projetos dinâmicos -->
+    <section id="projetos-dinamicos">
+      <h2>Projetos Dinâmicos</h2>
+      <div id="lista-projetos"></div>
+    </section>
+  </section>
+
+  <section id="video">
+    <h2>Assista ao vídeo sobre a importância da tecnologia</h2>
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/HY3gI637PmQ?si=RgYLgSl8dCIMIaYq"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+  </section>
+
+  <footer>
+    <p>Direitos reservados a Fernando Back</p>
+
+    <section id="contatos">
+      <h2>Contatos</h2>
+      <p>Entre em contato</p>
+      <address>
+        E-mail:
+        <a href="mailto:fernandoback@gmail.com">fernandoback@gmail.com</a><br />
+        telefone: <a href="tel:+5555">99999</a>
+      </address>
+    </section>
+
+    <form action="#" novalidate>
+      <label for="nome">Nome: </label>
+      <input type="text" id="nome" name="nome" required /><br />
+
+      <label for="email">E-mail: </label>
+      <input type="email" id="email" name="email" required /><br />
+
+      <label for="telefone">Telefone: </label>
+      <input type="tel" id="telefone" name="telefone" required /><br />
+
+      <label for="assunto">Assunto: </label>
+      <select name="assunto" id="assunto">
+        <option value="orcamento">Orçamento</option>
+        <option value="duvida">Dúvida</option>
+        <option value="outros">Outros</option>
+      </select>
+      <br />
+
+      <label for="mensagem">Mensagem: </label>
+      <textarea name="mensagem" id="mensagem" cols="20" rows="5"></textarea>
+      <br />
+
+      <input type="checkbox" id="inscricao" name="inscricao" />
+      <label for="inscricao">Deseja receber minha newsletter? Fique por dentro.</label>
+      <br />
+
+      <input type="submit" value="Enviar mensagem" />
+    </form>
+  </footer>
+</body>
+
+</html>
