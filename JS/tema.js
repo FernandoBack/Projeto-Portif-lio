@@ -1,25 +1,21 @@
-// tema.js - Alternância de tema claro/escuro
-export function aplicarTemaSalvo() {
-  const temaSalvo = localStorage.getItem("tema");
-  if (temaSalvo === "escuro") {
-    document.body.classList.add("escuro");
-    document.getElementById("btn-tema").textContent = "☀️ Modo Claro";
-  }
-}
+// Seleciona o botão e o span do ícone
+const btnToggle = document.getElementById("toggle-theme");
+const iconTema = document.getElementById("icon-tema");
 
-export function alternarTema() {
-  const body = document.body;
-  const botaoTema = document.getElementById("btn-tema");
+// Define o tema salvo ou padrão
+const temaSalvo = localStorage.getItem("theme");
+const temaInicial = temaSalvo || "light";
+document.body.classList.add(temaInicial);
+iconTema.textContent = temaInicial === "dark" ? "🌞" : "🌙";
 
-  if (body.classList.contains("escuro")) {
-    // Se já estiver no modo escuro, voltar para claro
-    body.classList.remove("escuro");
-    localStorage.setItem("tema", "claro");
-    botaoTema.textContent = "🌙 Modo Escuro";
-  } else {
-    // Se estiver no claro, trocar para escuro
-    body.classList.add("escuro");
-    localStorage.setItem("tema", "escuro");
-    botaoTema.textContent = "☀️ Modo Claro";
-  }
-}
+// Alterna tema ao clicar
+btnToggle.addEventListener("click", () => {
+  const temaAtual = document.body.classList.contains("dark") ? "dark" : "light";
+  const novoTema = temaAtual === "dark" ? "light" : "dark";
+
+  document.body.classList.remove(temaAtual);
+  document.body.classList.add(novoTema);
+  localStorage.setItem("theme", novoTema);
+
+  iconTema.textContent = novoTema === "dark" ? "🌞" : "🌙";
+});

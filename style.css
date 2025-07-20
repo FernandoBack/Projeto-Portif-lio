@@ -264,3 +264,18 @@ body.escuro a:hover {
 .card-projeto a:hover {
   text-decoration: underline;
 }
+#toggle-theme {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 1000;
+  transition: transform 0.3s;
+}
+
+#toggle-theme:hover {
+  transform: scale(1.1);
+}
